@@ -23,13 +23,18 @@
 |4바이트|int||float|||
 |8바이트|long||double|||
 
+// int num1 = 10; // 10진수 10을 의미
+// int num2 = 0B1010; // 2진수 10을 의미
+// int num3 = 012; // 8진수 10을 의미
+// int num4 = 0XA; // 16진수 10을 의미
+
 // char는 정수형도 가능하지만, 음수는 불가능하다.
 
 /* 자바는 기본적으로 모든 정수를 4바이트로 처리한다. 숫자가 12345678912가 있는 경우, 8바이트 자료이므로 식별자인 L을 붙여야 한다.
  *
  */
  
-// long num = 123445678912L
+// long num = 123445678912L;
 
 /* 문자를 정해진 코드 값으로 변환하는 것을 인코딩이라 하며, 코드 값을 다시 문자로 변환하는 것을 디코딩이라 한다.
  *
@@ -41,9 +46,9 @@
  *
  */
  
-// char character =  'a'
+// char character = 'a';
 
-// string word = "exercise"
+// string word = "exercise";
 
 // \는 ￦와 동일한 의미다.
 
@@ -51,7 +56,7 @@
  *
  */
  
-// float pi = 3.14F
+// float pi = 3.14F;
 
 /* var를 통해 자료형 없이 변수를 선언할 수 있다.
  *
@@ -61,9 +66,9 @@
  *
  */
 
-// final double PI = 3.14
+// final double PI = 3.14;
 
-// final float MIN_NUM = 1.11F 
+// final float MIN_NUM = 1.11F;
 
 /* 리터럴(literal)이란 프로그램에서 사용하는 모든 숫자, 문자, 논리값을 말한다.
  *
@@ -73,7 +78,7 @@
  * 강제 형 변환을 하기 위해 괄호 안에 바꿀 자료형을 써야 한다.
  */
 
-// int iNum1 = 10 ;
+// int iNum1 = 10;
 // byte bNum = (byte)iNUM1;
 
 // double PI = 3.14;
