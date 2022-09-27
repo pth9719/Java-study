@@ -4,25 +4,29 @@ package classpart;
 
 public class Student {
 
-  int studentId;
+	int studentId;
 
-  String studentName;
+	String studentName;
 
-  int grade;
+	int grade;
   
-  String address;
+	String address;
 
 // setter 우선 작성(사용자 클래스 내로 값을 받는 역할)
 
 public void setStudentId(int studentId) { // () 안에 매개변수 있음에 유의한다.
 
-  this.studentId = studentId; // this.를 사용하는 이유는 왼쪽 항이 멤버 변수임을 나타내기 위함이다.
+	this.studentId = studentId; // this.를 사용하는 이유는 왼쪽 항이 멤버 변수임을 나타내기 위함이다.
+
+}
 
 // getter 작성(사용자 클래스 밖으로 값을 내보내는 역할)
 
 public int getStudentId() { // ()안에 매개변수 없음에 유의한다.
 
-  return this.studentId; // this.를 사용하는 이유는 멤버 변수임을 나타내기 위함이다. 
+	return this.studentId; // this.를 사용하는 이유는 멤버 변수임을 나타내기 위함이다. 
+
+}
 
 }
 
@@ -32,12 +36,16 @@ package classpart;
 
 public class StudentMain{
 
-  public static void main(String[] args) {
+	public static void main(String[] args) {
 
-  Student stu1 = new Student(); // new는 메인 함수에서 새로운 클래스 변수를 생성할 수 있는 예약어다. 메인 함수에서 선언된 새로운 클래스 변수를 인스턴스(객체)라고도 부른다.
+	Student stu1 = new Student(); // new는 메인 함수에서 새로운 클래스 변수를 생성할 수 있는 예약어다. 메인 함수에서 선언된 새로운 클래스 변수를 인스턴스(객체)라고도 부른다.
 
 	stu1.setStudentId(20110228); // stu1의 StudentId 속성을 입력
 
 	System.out.println(stu1.getStudentId()); // 20110228이 출력된다.
+
+}
+
+}
 
 public이나 private을 예약어라고 하며, public으로 선언한 변수나 메소드는 외부 클래스에서 접근 가능하지만, private으로 선언한 변수나 메소드는 내부 클레스에서만 사용 가능하다.
