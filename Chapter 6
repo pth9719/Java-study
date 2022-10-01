@@ -89,5 +89,5 @@ public class Main {
         System.out.println(stu2.studentName + "가 " + su1.subwayLineNumber + " 라인 지하철을 타고 남은 잔액은 " + stu2.money + "원입니다.");    
 
         }
-d
+
 }
