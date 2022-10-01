@@ -1,0 +1,21 @@
+변수를 수 십개 선언해서 사용하기에는 비효율적이므로 이 때 사용하는 자료형이 배열이다. 배열을 사용하기 위해 배열을 선언해야 한다.
+
+int[] studentIDs = new int[10]; // 자료형이 int인 studentIDs가 10개인 배열 선언
+
+배열 선언과 동시에 초기화하는 방법
+
+int[] studentIDs = new int[] {101, 102, 103}; // 개수는 생략한다.
+
+배열의 1번 째, 요소에 값을 넣는 방법
+
+studentIDs[0] = 1; // 배열의 첫 번째 요소에 값 1을 저장한다. 여기서 []는 인덱스 연산자다.
+
+num.length란 num 변수 배열의 길이를 의미하며, 배열의 길이는 배열의 개수를 의미한다. 
+
+기존 배열의 경우 배열의 길이를 변경할 수 없기에 이를 더 쉽게 사용하고자 ArrayList를 사용한다.
+
+ArrayList<E> 배열 이름 = new ArrayList<E>(); <E>를 제네릭 자료형이라 한다.
+
+ArrayList<Book> library = new ArrayList<Book>();
+
+ArrayList를 선언하기 전에 package 아래에 import java.util.ArrayList를 작성한다.
