@@ -1,0 +1,93 @@
+세 개 이상의 클래스가 있는 경우, 클래스 간 협력을 위해 각 클래스에 생성자와 메소드를 만들어야 한다.
+
+예제: James 학생은 통장에 5000원이 있고 100번 버스를 타고, Tomas 학생은 10000원이 있고 Green 지하철을 탄다. 버스의 요금은 1000원, 지하철의 요금은 1500원이다. 각 학생이 대중 교통을 타고 남은 잔액을 결과값으로 출력하시오.
+
+package cooperation;
+
+public class Student {
+
+        // student의 멤버 변수 부분
+        String studentName;
+        int money;
+
+        // student의 생성자 부분
+        public Student(String studentName, int money) {
+                this.studentName = studentName;
+                this.money = money;
+        }
+
+        // student의 메소드 부분
+        public void takeBus(Bus bus) { // takeBus는 개발자 임의로 작명 가능하며, 함수 반환형이 없으므로 void를 입력한다.
+                bus.take(1000); // bus 클래스에 take라는 메소드를 작성해야 한다.
+                this.money -= 1000;
+        }
+
+        public void takeSubway(Subway subway) {
+                subway.take(1500); // subway 클래스에 take라는 메소드를 작성해야 한다.
+                this.money -= 1500;
+        }
+
+}
+
+package cooperation;
+
+public class Bus {
+
+        // Bus의 멤버 변수 부분
+        int busNumber;
+        int money;
+
+        // Bus의 생성자 부분
+        public Bus(int busNumber) {
+                this.busNumber = busNumber;
+        }
+
+        // Bus의 메소드 부분
+        public void take(int money) {
+                this.money += money;
+        }
+
+}
+
+package cooperation;
+
+public class Subway {
+
+        // Subway의 멤버 변수 부분
+        String subwayLineNumber;
+        int money;
+
+        // Subway의 생성자 부분
+        public Subway(String subwayLineNumber) {
+        this.subwayLineNumber = subwayLineNumber;
+        }
+  
+        // Subway의 메소드 부분
+        public void take(int money) {
+        this.money += money;
+        }
+
+}
+
+package cooperation;
+
+public class Main {
+
+        public static void main(String[] args) {
+
+        Student stu1 = new Student("James", 5000); // 생성자 new를 이용하여 클래스 변수 생성
+        Student stu2 = new Student("Tomas", 10000);
+
+        Bus bu1 = new Bus(100);
+
+        Subway su1 = new Subway("Green");
+
+        stu1.takeBus(bu1); // stu1이 takeBus라는 기능을 수행한다. ()안에 새로 생성한 변수를 넣는다.
+        stu2.takeSubway(su1);
+
+        System.out.println(stu1.studentName + "가 " + bu1.busNumber + "번 버스를 타고 남은 잔액은 " + stu1.money + "원입니다.");
+        System.out.println(stu2.studentName + "가 " + su1.subwayLineNumber + " 라인 지하철을 타고 남은 잔액은 " + stu2.money + "원입니다.");    
+
+        }
+
+}
